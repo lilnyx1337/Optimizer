@@ -22,35 +22,35 @@ namespace FlowOptimizer
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.tweaksTabPage = new System.Windows.Forms.TabPage();
             this.inputGroupBox = new System.Windows.Forms.GroupBox();
             this.applyInputTweaksButton = new System.Windows.Forms.Button();
             this.restoreInputTweaksButton = new System.Windows.Forms.Button();
-
             this.networkGroupBox = new System.Windows.Forms.GroupBox();
             this.applyNetworkTweaksButton = new System.Windows.Forms.Button();
             this.restoreNetworkTweaksButton = new System.Windows.Forms.Button();
-
             this.powerGroupBox = new System.Windows.Forms.GroupBox();
             this.applyPowerTweaksButton = new System.Windows.Forms.Button();
             this.restorePowerTweaksButton = new System.Windows.Forms.Button();
-
             this.serviceGroupBox = new System.Windows.Forms.GroupBox();
             this.applyServiceTweaksButton = new System.Windows.Forms.Button();
             this.restoreServiceTweaksButton = new System.Windows.Forms.Button();
-
             this.debloatGroupBox = new System.Windows.Forms.GroupBox();
             this.applyDebloatButton = new System.Windows.Forms.Button();
             this.restoreDebloatButton = new System.Windows.Forms.Button();
-
             this.cleanupGroupBox = new System.Windows.Forms.GroupBox();
             this.applyCleanupButton = new System.Windows.Forms.Button();
-
+            this.windowsTabPage = new System.Windows.Forms.TabPage();
+            this.cpuTabPage = new System.Windows.Forms.TabPage();
+            this.gpuTabPage = new System.Windows.Forms.TabPage();
+            this.ramTabPage = new System.Windows.Forms.TabPage();
+            this.biosTabPage = new System.Windows.Forms.TabPage();
+            this.settingsTabPage = new System.Windows.Forms.TabPage();
+            this.mainTabControl.SuspendLayout();
+            this.tweaksTabPage.SuspendLayout();
             this.inputGroupBox.SuspendLayout();
             this.networkGroupBox.SuspendLayout();
             this.powerGroupBox.SuspendLayout();
@@ -58,13 +58,44 @@ namespace FlowOptimizer
             this.debloatGroupBox.SuspendLayout();
             this.cleanupGroupBox.SuspendLayout();
             this.SuspendLayout();
-
+            //
+            // mainTabControl
+            //
+            this.mainTabControl.Controls.Add(this.tweaksTabPage);
+            this.mainTabControl.Controls.Add(this.windowsTabPage);
+            this.mainTabControl.Controls.Add(this.cpuTabPage);
+            this.mainTabControl.Controls.Add(this.gpuTabPage);
+            this.mainTabControl.Controls.Add(this.ramTabPage);
+            this.mainTabControl.Controls.Add(this.biosTabPage);
+            this.mainTabControl.Controls.Add(this.settingsTabPage);
+            this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTabControl.Location = new System.Drawing.Point(0, 0);
+            this.mainTabControl.Name = "mainTabControl";
+            this.mainTabControl.SelectedIndex = 0;
+            this.mainTabControl.Size = new System.Drawing.Size(354, 411);
+            this.mainTabControl.TabIndex = 0;
+            //
+            // tweaksTabPage
+            //
+            this.tweaksTabPage.Controls.Add(this.inputGroupBox);
+            this.tweaksTabPage.Controls.Add(this.networkGroupBox);
+            this.tweaksTabPage.Controls.Add(this.powerGroupBox);
+            this.tweaksTabPage.Controls.Add(this.serviceGroupBox);
+            this.tweaksTabPage.Controls.Add(this.debloatGroupBox);
+            this.tweaksTabPage.Controls.Add(this.cleanupGroupBox);
+            this.tweaksTabPage.Location = new System.Drawing.Point(4, 22);
+            this.tweaksTabPage.Name = "tweaksTabPage";
+            this.tweaksTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.tweaksTabPage.Size = new System.Drawing.Size(346, 385);
+            this.tweaksTabPage.TabIndex = 0;
+            this.tweaksTabPage.Text = "Tweaks";
+            this.tweaksTabPage.UseVisualStyleBackColor = true;
             //
             // inputGroupBox
             //
             this.inputGroupBox.Controls.Add(this.applyInputTweaksButton);
             this.inputGroupBox.Controls.Add(this.restoreInputTweaksButton);
-            this.inputGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.inputGroupBox.Location = new System.Drawing.Point(8, 6);
             this.inputGroupBox.Name = "inputGroupBox";
             this.inputGroupBox.Size = new System.Drawing.Size(330, 60);
             this.inputGroupBox.TabIndex = 0;
@@ -90,13 +121,12 @@ namespace FlowOptimizer
             this.restoreInputTweaksButton.Text = "Restore Input Tweaks";
             this.restoreInputTweaksButton.UseVisualStyleBackColor = true;
             this.restoreInputTweaksButton.Click += new System.EventHandler(this.restoreInputTweaksButton_Click);
-
             //
             // networkGroupBox
             //
             this.networkGroupBox.Controls.Add(this.applyNetworkTweaksButton);
             this.networkGroupBox.Controls.Add(this.restoreNetworkTweaksButton);
-            this.networkGroupBox.Location = new System.Drawing.Point(12, 78);
+            this.networkGroupBox.Location = new System.Drawing.Point(8, 72);
             this.networkGroupBox.Name = "networkGroupBox";
             this.networkGroupBox.Size = new System.Drawing.Size(330, 60);
             this.networkGroupBox.TabIndex = 1;
@@ -122,13 +152,12 @@ namespace FlowOptimizer
             this.restoreNetworkTweaksButton.Text = "Restore Network Tweaks";
             this.restoreNetworkTweaksButton.UseVisualStyleBackColor = true;
             this.restoreNetworkTweaksButton.Click += new System.EventHandler(this.restoreNetworkTweaksButton_Click);
-
             //
             // powerGroupBox
             //
             this.powerGroupBox.Controls.Add(this.applyPowerTweaksButton);
             this.powerGroupBox.Controls.Add(this.restorePowerTweaksButton);
-            this.powerGroupBox.Location = new System.Drawing.Point(12, 144);
+            this.powerGroupBox.Location = new System.Drawing.Point(8, 138);
             this.powerGroupBox.Name = "powerGroupBox";
             this.powerGroupBox.Size = new System.Drawing.Size(330, 60);
             this.powerGroupBox.TabIndex = 2;
@@ -154,13 +183,12 @@ namespace FlowOptimizer
             this.restorePowerTweaksButton.Text = "Restore Power Tweaks";
             this.restorePowerTweaksButton.UseVisualStyleBackColor = true;
             this.restorePowerTweaksButton.Click += new System.EventHandler(this.restorePowerTweaksButton_Click);
-
             //
             // serviceGroupBox
             //
             this.serviceGroupBox.Controls.Add(this.applyServiceTweaksButton);
             this.serviceGroupBox.Controls.Add(this.restoreServiceTweaksButton);
-            this.serviceGroupBox.Location = new System.Drawing.Point(12, 210);
+            this.serviceGroupBox.Location = new System.Drawing.Point(8, 204);
             this.serviceGroupBox.Name = "serviceGroupBox";
             this.serviceGroupBox.Size = new System.Drawing.Size(330, 60);
             this.serviceGroupBox.TabIndex = 3;
@@ -186,13 +214,12 @@ namespace FlowOptimizer
             this.restoreServiceTweaksButton.Text = "Restore Service Tweaks";
             this.restoreServiceTweaksButton.UseVisualStyleBackColor = true;
             this.restoreServiceTweaksButton.Click += new System.EventHandler(this.restoreServiceTweaksButton_Click);
-
             //
             // debloatGroupBox
             //
             this.debloatGroupBox.Controls.Add(this.applyDebloatButton);
             this.debloatGroupBox.Controls.Add(this.restoreDebloatButton);
-            this.debloatGroupBox.Location = new System.Drawing.Point(12, 276);
+            this.debloatGroupBox.Location = new System.Drawing.Point(8, 270);
             this.debloatGroupBox.Name = "debloatGroupBox";
             this.debloatGroupBox.Size = new System.Drawing.Size(330, 60);
             this.debloatGroupBox.TabIndex = 4;
@@ -218,12 +245,11 @@ namespace FlowOptimizer
             this.restoreDebloatButton.Text = "Restore Debloat";
             this.restoreDebloatButton.UseVisualStyleBackColor = true;
             this.restoreDebloatButton.Click += new System.EventHandler(this.restoreDebloatButton_Click);
-
             //
             // cleanupGroupBox
             //
             this.cleanupGroupBox.Controls.Add(this.applyCleanupButton);
-            this.cleanupGroupBox.Location = new System.Drawing.Point(12, 342);
+            this.cleanupGroupBox.Location = new System.Drawing.Point(8, 336);
             this.cleanupGroupBox.Name = "cleanupGroupBox";
             this.cleanupGroupBox.Size = new System.Drawing.Size(330, 60);
             this.cleanupGroupBox.TabIndex = 5;
@@ -239,21 +265,72 @@ namespace FlowOptimizer
             this.applyCleanupButton.Text = "Apply System Cleanup";
             this.applyCleanupButton.UseVisualStyleBackColor = true;
             this.applyCleanupButton.Click += new System.EventHandler(this.applyCleanupButton_Click);
-
+            //
+            // windowsTabPage
+            //
+            this.windowsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.windowsTabPage.Name = "windowsTabPage";
+            this.windowsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.windowsTabPage.Size = new System.Drawing.Size(346, 385);
+            this.windowsTabPage.TabIndex = 1;
+            this.windowsTabPage.Text = "Windows";
+            this.windowsTabPage.UseVisualStyleBackColor = true;
+            //
+            // cpuTabPage
+            //
+            this.cpuTabPage.Location = new System.Drawing.Point(4, 22);
+            this.cpuTabPage.Name = "cpuTabPage";
+            this.cpuTabPage.Size = new System.Drawing.Size(346, 385);
+            this.cpuTabPage.TabIndex = 2;
+            this.cpuTabPage.Text = "CPU";
+            this.cpuTabPage.UseVisualStyleBackColor = true;
+            //
+            // gpuTabPage
+            //
+            this.gpuTabPage.Location = new System.Drawing.Point(4, 22);
+            this.gpuTabPage.Name = "gpuTabPage";
+            this.gpuTabPage.Size = new System.Drawing.Size(346, 385);
+            this.gpuTabPage.TabIndex = 3;
+            this.gpuTabPage.Text = "GPU";
+            this.gpuTabPage.UseVisualStyleBackColor = true;
+            //
+            // ramTabPage
+            //
+            this.ramTabPage.Location = new System.Drawing.Point(4, 22);
+            this.ramTabPage.Name = "ramTabPage";
+            this.ramTabPage.Size = new System.Drawing.Size(346, 385);
+            this.ramTabPage.TabIndex = 4;
+            this.ramTabPage.Text = "RAM";
+            this.ramTabPage.UseVisualStyleBackColor = true;
+            //
+            // biosTabPage
+            //
+            this.biosTabPage.Location = new System.Drawing.Point(4, 22);
+            this.biosTabPage.Name = "biosTabPage";
+            this.biosTabPage.Size = new System.Drawing.Size(346, 385);
+            this.biosTabPage.TabIndex = 5;
+            this.biosTabPage.Text = "BIOS";
+            this.biosTabPage.UseVisualStyleBackColor = true;
+            //
+            // settingsTabPage
+            //
+            this.settingsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.settingsTabPage.Name = "settingsTabPage";
+            this.settingsTabPage.Size = new System.Drawing.Size(346, 385);
+            this.settingsTabPage.TabIndex = 6;
+            this.settingsTabPage.Text = "Settings";
+            this.settingsTabPage.UseVisualStyleBackColor = true;
             //
             // Form1
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 411);
-            this.Controls.Add(this.inputGroupBox);
-            this.Controls.Add(this.networkGroupBox);
-            this.Controls.Add(this.powerGroupBox);
-            this.Controls.Add(this.serviceGroupBox);
-            this.Controls.Add(this.debloatGroupBox);
-            this.Controls.Add(this.cleanupGroupBox);
+            this.Controls.Add(this.mainTabControl);
             this.Name = "Form1";
             this.Text = "FlowOptimizer";
+            this.mainTabControl.ResumeLayout(false);
+            this.tweaksTabPage.ResumeLayout(false);
             this.inputGroupBox.ResumeLayout(false);
             this.networkGroupBox.ResumeLayout(false);
             this.powerGroupBox.ResumeLayout(false);
@@ -265,26 +342,29 @@ namespace FlowOptimizer
 
         #endregion
 
+        private System.Windows.Forms.TabControl mainTabControl;
+        private System.Windows.Forms.TabPage tweaksTabPage;
+        private System.Windows.Forms.TabPage windowsTabPage;
+        private System.Windows.Forms.TabPage cpuTabPage;
+        private System.Windows.Forms.TabPage gpuTabPage;
+        private System.Windows.Forms.TabPage ramTabPage;
+        private System.Windows.Forms.TabPage biosTabPage;
+        private System.Windows.Forms.TabPage settingsTabPage;
         private System.Windows.Forms.GroupBox inputGroupBox;
         private System.Windows.Forms.Button applyInputTweaksButton;
         private System.Windows.Forms.Button restoreInputTweaksButton;
-
         private System.Windows.Forms.GroupBox networkGroupBox;
         private System.Windows.Forms.Button applyNetworkTweaksButton;
         private System.Windows.Forms.Button restoreNetworkTweaksButton;
-
         private System.Windows.Forms.GroupBox powerGroupBox;
         private System.Windows.Forms.Button applyPowerTweaksButton;
         private System.Windows.Forms.Button restorePowerTweaksButton;
-
         private System.Windows.Forms.GroupBox serviceGroupBox;
         private System.Windows.Forms.Button applyServiceTweaksButton;
         private System.Windows.Forms.Button restoreServiceTweaksButton;
-
         private System.Windows.Forms.GroupBox debloatGroupBox;
         private System.Windows.Forms.Button applyDebloatButton;
         private System.Windows.Forms.Button restoreDebloatButton;
-
         private System.Windows.Forms.GroupBox cleanupGroupBox;
         private System.Windows.Forms.Button applyCleanupButton;
     }
